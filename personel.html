@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
 
 <head>
   <title>โรงเรียนชลราษฎรอำรุง</title>
   <link rel="icon" type="image/png" href="images/crulogo.png" />
+  <META http-equiv="expires" content="0">
   <meta http-equiv=refresh>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +24,7 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/main.js"></script>
-
+  <link href="css/personel.css" rel="stylesheet">
 
   <style>
     .video-container {
@@ -43,12 +44,111 @@
       width: 92%;
       height: 92%;
     }
-   
-   
-   
-  
-   
+
+    .btn {
+      background-color: #fff;
+      color: #fff;
+      margin-top: 10px;
+      margin-right: 5px;
+      margin-bottom: 10px;
+    }
+
+    select {
+
+      /* styling */
+      color :#fff;
+      background-color: #F27405;
+      border: thin solid #F27405;
+      display: inline-block;
+      font: inherit;
+      line-height: 1.5em;
+      padding: 0.5em 3.5em 0.5em 1em;
+      width: 100%;
+      border-radius: 4px;
+      
+      /* reset */
+
+      margin: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+
+    }
+    select.minimal {
+  background-image:
+    linear-gradient(45deg, transparent 50%,#fff 50%),
+    linear-gradient(135deg, #fff, transparent 50%),
+    linear-gradient(to right, #fff, #fff);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+select option:hover {
+  background: #ddd -webkit-linear-gradient(bottom, #ddd 0%, #ddd 100%);
+  color: #F27405;
+}
+select option:checked {
+  background: #056CF2 -webkit-linear-gradient(bottom, #056CF2 0%, #056CF2 100%);
+  color: #fff;
+}
+
+
+
+
+
+
+select.minimal:focus {
+   outline: 0;
+ background-repeat: no-repeat;
+
+  /*
+  background-image:
+    linear-gradient(45deg, #0597F2 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, #0597F2 50%),
+    linear-gradient(to right, #0597F2, #0597F2);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: #0597F2;
+  outline: 0;
+  color:#0597F2
+  */
+}
   </style>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
 
 
 
@@ -60,7 +160,7 @@
 
 </head>
 
-<body >
+<body style="height: 100%;">
   <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header text-white">
       <div class="site-mobile-menu-close mt-3">
@@ -77,7 +177,7 @@
         </div>
         
     </header> -->
-  <header class="site-navbar site-navbar-target bg-nav navanimate" role="banner" >
+  <header class="site-navbar site-navbar-target bg-nav navanimate " role="banner">
 
     <div class="container">
       <div class="row align-items-center position-relative">
@@ -120,64 +220,111 @@
 
   </header>
 
+  <script>
+   
+   $(function() {
+  loadPage("personel/directors.html");
+
+  $('#mySelect').on('change', function() {
+    loadPage($(this).find(':selected').data('url'));
+    //OR
+    // $("#page").load( $(this).find(':selected').data('url') );
+  });
+});
+
+function loadPage(url) {
+  $("#content").load(url);
+}
+  </script>
+  <div class="container-fluid">
+    <div class="row" style="margin-bottom:20px;margin-top: 20px; ">
+      <div class="col-12">
+        <select class="minimal" id="mySelect" onfocus='this.size=13;' onblur='this.size=0;' onchange='this.size=1; this.blur();'>
+          <option selected value="0"  data-url="personel/directors.html">ผู้บริหาร</option>
+          <option value="1"  data-url="" >กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี</option>
+          <option value="2"  data-url="" >กลุ่มสาระการเรียนรู้คณิตศาสตร์</option>
+          <option value="3"  data-url="" >กลุ่มสาระการเรียนรู้ภาษาไทย</option>
+          <option value="4"  data-url="" >กลุ่มสาระการเรียนรู้สังคมศึกษา ศาสนาและวัฒนธรรม</option>
+          <option value="5"  data-url="" >กลุ่มสาระการเรียนรู้ภาษาต่างประเทศ</option>
+          <option value="6"  data-url="" >กลุ่มสาระการเรียนรู้การงานอาชีพ</option>
+          <option value="7"  data-url="" >กลุ่มสาระการเรียนรู้ศิลปะ</option>
+          <option value="8"  data-url="personel/sport.html" >กลุ่มสาระการเรียนรู้สุขศึกษาและพลศึกษา</option>
+          <option value="9"  data-url="" >กลุ่มงานคอมพิวเตอร์</option>
+          <option value="10"  data-url="" >กลุ่มงานกิจกรรมพัฒนาผู้เรียน</option>
+          <option value="11"  data-url="" >โครงการห้องเรียนพิเศษENGLISH PROGRAM</option>
+          <option value="12"  data-url="" >เจ้าหน้าที่สำนักงาน นักการและลูกจ้างชั่วคราว</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-12 " id="content" style="margin-bottom: 50px;">
+
+
+
+
+
+
+    </div>
+  </div>
+  </div>
+  <!--
   <div class="container-fluid fadecontent" style="min-height: calc(100vh - 410px)">
     <div class="row t">
-      <div class="col-12 text-center">
-        <img class="img-responsive" src="images/sorry.png" width="200px" alt="">
-        <h1>SORRY THE WEBPAGE UNDER CONSTRUCTION</h1>
-        WE'RE MAKING LOTS OF IMPROVEMENT AND WILL BE BACK SOON
+      <div class="col-xs-12 col-12 vh-100" id="test" style="margin-bottom:50px;"> 
+
       </div>
     </div>
   </div>
+-->
+  <!--
+  <footer style="background-color: #0597F2;">-->
+  <div class="container-fluid p-4" style="background-color: #0597F2;">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4">
+        <h5 class="mb-3" style="letter-spacing: 2px; color: #fff;"><img style="margin-right: 5px;" alt=""
+            src="images/crulogo.png" width="35px"> โรงเรียนชลราษฎรอำรุง</h5>
+        <p style=" color: #fff;">
+          215 หมู่ 3 ถนนพระยาสัจจา ตำบลบ้านสวน อำเภอเมืองชลบุรี จังหวัดชลบุรี 20000 <br><img src="images/phone-call.png" alt=""
+            width="20px">
+          <span style=" line-height: 1.8;margin-left: 10px;">038-282078</span><br><img src="images/fax.png" alt=""
+            width="20px">
+          <span style="line-height: 2.8;margin-left: 10px;">038-286079</span><br><img src="images/email.png" alt=""
+            width="20px">
+          <span style="line-height: 1.8;margin-left: 10px;">Chonchai@cru.ac.th</span>
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-3" style="letter-spacing: 2px; color: #fff;">Powered by</h5>
+        <img style="margin-right: 5px;" src="images/css.png" width="120px" alt=""> 
+        <img style="margin-right: 5px; margin-top: 5px; margin-left: 5px;" src="images/bootstrap.png" width="32px" alt=""
+        <p class="" style="letter-spacing: 2px; color: #fff; margin-top: 10px;">w3.css <br> <a class="text-white"
+            href="credits.html" target="_blank">Flaticon-credits--click</a></p><br>
 
 
-  <footer style="background-color: #0597F2;">
-    <div class="container p-4">
-      <div class="row">
-        <div class="col-lg-6 col-md-12 mb-4">
-          <h5 class="mb-3" style="letter-spacing: 2px; color: #fff;"><img style="margin-right: 5px;"
-              src="images/crulogo.png" width="35px" alt=""> โรงเรียนชลราษฎรอำรุง</h5>
-          <p style=" color: #fff;">
-            215 หมู่ 3 ถนนพระยาสัจจา ตำบลบ้านสวน อำเภอเมืองชลบุรี จังหวัดชลบุรี 20000 <br><img
-              src="images/phone-call.png" width="20px" alt="">
-            <span style=" line-height: 1.8;margin-left: 10px;">038-282078</span><br><img src="images/fax.png"
-              width="20px" alt="">
-            <span style="line-height: 2.8;margin-left: 10px;">038-286079</span><br><img src="images/email.png"
-              width="20px" alt="">
-            <span style="line-height: 1.8;margin-left: 10px;">Chonchai@cru.ac.th</span>
-          </p>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="mb-3" style="letter-spacing: 2px; color: #fff;">Powered by</h5>
-          <img style="margin-right: 5px;" src="images/css.png" width="120px" alt="">
-          <img style="margin-right: 5px; margin-top: 5px; margin-left: 5px;" src="images/bootstrap.png" width="32px" alt="">
-          <p class="" style="letter-spacing: 2px; color: #fff; margin-top: 10px;">w3.css <br> <a class="text-white"
-              href="credits.html" target="_blank">Flaticon-credits--click</a></p><br>
-
-
-        </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5 class="mb-1" style="letter-spacing: 2px; color: #fff;">เวลาทำการ</h5>
-          <table class="table" style="color: #fff; border-color: #fff;">
-            <tbody>
-              <tr>
-                <td>จันทร์ - ศุกร์:</td>
-                <td>8.30 - 16.30</td>
-              </tr>
-              <tr>
-                <td colspan="2">หยุดวันเสาร์ - อาทิตย์และวันหยุดนักขัตฤกษ์</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="mb-1" style="letter-spacing: 2px; color: #fff;">เวลาทำการ</h5>
+        <table class="table" style="color: #fff; border-color: #fff;">
+          <tbody>
+            <tr>
+              <td>จันทร์ - ศุกร์:</td>
+              <td>8.30 - 16.30</td>
+            </tr>
+            <tr>
+              <td colspan="2">หยุดวันเสาร์ - อาทิตย์และวันหยุดนักขัตฤกษ์</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-    <div class="text-center p-3 text-white" style="background-color: #056CF2;">
-      © 2022 Copyright:
-      <a class="text-white" href="https://www.cru.ac.th/">www.cru.ac.th</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
+  </div>
+  <div class="text-center p-3 text-white" style="background-color: #056CF2;">
+    © 2022 Copyright:
+    <a class="text-white" href="https://www.cru.ac.th/">www.cru.ac.th</a>
+  </div>
+
+  <!-- Copyright -->
+
 </body>
 
 </html>
