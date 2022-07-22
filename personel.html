@@ -223,8 +223,8 @@ select.minimal:focus {
   <script>
    
    $(function() {
-  loadPage("personel/directors.html");
-  // loadPage("personel/science.html");
+  //loadPage("personel/directors.html");
+   loadPage("personel/math.html");
 
   $('#mySelect').on('change', function() {
     loadPage($(this).find(':selected').data('url'));
@@ -243,17 +243,17 @@ function loadPage(url) {
         <select class="minimal" id="mySelect" onfocus='this.size=13;' onblur='this.size=0;' onchange='this.size=1; this.blur();'>
           <option selected value="0"  data-url="personel/directors.html">ผู้บริหาร</option>
           <option value="1"  data-url="personel/science.html" >กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี</option>
-          <option value="2"  data-url="" >กลุ่มสาระการเรียนรู้คณิตศาสตร์</option>
-          <option value="3"  data-url="" >กลุ่มสาระการเรียนรู้ภาษาไทย</option>
-          <option value="4"  data-url="" >กลุ่มสาระการเรียนรู้สังคมศึกษา ศาสนาและวัฒนธรรม</option>
-          <option value="5"  data-url="" >กลุ่มสาระการเรียนรู้ภาษาต่างประเทศ</option>
-          <option value="6"  data-url="" >กลุ่มสาระการเรียนรู้การงานอาชีพ</option>
-          <option value="7"  data-url="" >กลุ่มสาระการเรียนรู้ศิลปะ</option>
-          <option value="8"  data-url="personel/sport.html" >กลุ่มสาระการเรียนรู้สุขศึกษาและพลศึกษา</option>
-          <option value="9"  data-url="" >กลุ่มงานเทคโนโลยี</option>
-          <option value="10"  data-url="" >กลุ่มงานกิจกรรมพัฒนาผู้เรียน</option>
-          <option value="11"  data-url="" >โครงการห้องเรียนพิเศษENGLISH PROGRAM</option>
-          <option value="12"  data-url="" >เจ้าหน้าที่สำนักงาน นักการและลูกจ้างชั่วคราว</option>
+          <option value="2"  data-url="personel/math.html" >กลุ่มสาระการเรียนรู้คณิตศาสตร์</option>
+          <option value="3"  data-url="personel/construction.html" >กลุ่มสาระการเรียนรู้ภาษาไทย</option>
+          <option value="4"  data-url="personel/construction.html" >กลุ่มสาระการเรียนรู้สังคมศึกษา ศาสนาและวัฒนธรรม</option>
+          <option value="5"  data-url="personel/construction.html" >กลุ่มสาระการเรียนรู้ภาษาต่างประเทศ</option>
+          <option value="6"  data-url="personel/construction.html" >กลุ่มสาระการเรียนรู้การงานอาชีพ</option>
+          <option value="7"  data-url="personel/construction.html" >กลุ่มสาระการเรียนรู้ศิลปะ</option>
+          <option value="8"  data-url="personel/construction.html" >กลุ่มสาระการเรียนรู้สุขศึกษาและพลศึกษา</option>
+          <option value="9"  data-url="personel/construction.html" >กลุ่มงานเทคโนโลยี</option>
+          <option value="10"  data-url="personel/construction.html" >กลุ่มงานกิจกรรมพัฒนาผู้เรียน</option>
+          <option value="11"  data-url="personel/construction.html" >โครงการห้องเรียนพิเศษENGLISH PROGRAM</option>
+          <option value="12"  data-url="personel/construction.html" >เจ้าหน้าที่สำนักงาน นักการและลูกจ้างชั่วคราว</option>
         </select>
       </div>
     </div>
