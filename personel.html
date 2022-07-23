@@ -223,9 +223,7 @@ select.minimal:focus {
   <script>
    
    $(function() {
-  //loadPage("personel/directors.html");
-   loadPage("personel/ep.html");
-
+  loadPage("personel/directors.html");
   $('#mySelect').on('change', function() {
     loadPage($(this).find(':selected').data('url'));
     //OR
@@ -253,7 +251,7 @@ function loadPage(url) {
           <option value="9"  data-url="personel/com.html" >กลุ่มงานเทคโนโลยี</option>
           <option value="10"  data-url="personel/activity.html" >กลุ่มงานกิจกรรมพัฒนาผู้เรียน</option>
           <option value="11"  data-url="personel/ep.html" >โครงการห้องเรียนพิเศษENGLISH PROGRAM</option>
-          <option value="12"  data-url="personel/construction.html" >เจ้าหน้าที่สำนักงาน นักการและลูกจ้างชั่วคราว</option>
+          <option value="12"  data-url="personel/officer.html" >เจ้าหน้าที่สำนักงาน</option>
         </select>
       </div>
     </div>
