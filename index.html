@@ -5,8 +5,8 @@
   <title>โรงเรียนชลราษฎรอำรุง</title>
   <link rel="icon" type="image/png" href="images/crulogo.png" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0"/>
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <meta http-equiv=refresh>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,10 +82,10 @@
 </head>
 
 <body>
-  
+
   <script>
     $(document).ready(function () {
-		
+
 
       var x = window.matchMedia("(max-width: 700px)")
       if (x.matches) {
@@ -95,11 +95,14 @@
           backdrop: 'rgba(0,0,0,.7)',
           width: 380,
           height: 500,
-          showCancelButton: true,
-          html: '<iframe  width="285px" height="428px" src="carousel-mobile.html""  frameborder="0"></iframe>',
+          //showCancelButton: true,
+          imageUrl: '/images/king/mother-mobile.png',
+          imageWidth: 285,
+          imageHeight: 428,
+          //html: '<iframe  width="285px" height="428px" src="carousel-mobile.html""  frameborder="0"></iframe>',
           confirmButtonText: 'เข้าสู่เว็บไซต์',
           cancelButtonColor: '#BF6B04',
-          cancelButtonText: '<a href="https://script.google.com/macros/s/AKfycbxwyqcMSemGbSv1fKzge_WofZkLipSK_I7p2IzxVx_Fcd9B5aRU4FW0hJVXOocqWDi0Ag/exec" target="_blank" style="color:white;">ลงนามถวายพระพร</a>',
+          //cancelButtonText: '<a href="https://script.google.com/macros/s/AKfycbxwyqcMSemGbSv1fKzge_WofZkLipSK_I7p2IzxVx_Fcd9B5aRU4FW0hJVXOocqWDi0Ag/exec" target="_blank" style="color:white;">ลงนามถวายพระพร</a>',
         })
       } else {
         Swal.fire({
@@ -108,11 +111,14 @@
           backdrop: 'rgba(0,0,0,.7)',
           width: 800,
           height: 540,
-          showCancelButton: true,
-          html: '<iframe  width="720px" height="540px"  src="carousel.html""  frameborder="0"></iframe>',
+          //showCancelButton: true,
+          imageUrl: '/images/king/mother.png',
+          imageWidth: 720,
+          imageHeight: 540,
+          //html: '<iframe  width="720px" height="540px"  src="carousel.html""  frameborder="0"></iframe>',
           confirmButtonText: 'เข้าสู่เว็บไซต์',
           cancelButtonColor: '#BF6B04',
-          cancelButtonText: '<a href="https://script.google.com/macros/s/AKfycbxwyqcMSemGbSv1fKzge_WofZkLipSK_I7p2IzxVx_Fcd9B5aRU4FW0hJVXOocqWDi0Ag/exec" target="_blank" style="color:white;">ลงนามถวายพระพร</a>',
+          //cancelButtonText: '<a href="https://script.google.com/macros/s/AKfycbxwyqcMSemGbSv1fKzge_WofZkLipSK_I7p2IzxVx_Fcd9B5aRU4FW0hJVXOocqWDi0Ag/exec" target="_blank" style="color:white;">ลงนามถวายพระพร</a>',
         })
       }
     });
@@ -641,7 +647,7 @@
     <!-- Copyright -->
   </footer>
 
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 </body>
 
