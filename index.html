@@ -32,6 +32,10 @@
 
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -68,6 +72,43 @@
       border-radius: 8px;
       width: 125px;
       height: 180px;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .wave-container {
+      position: relative;
+
+      width: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/1.jpg);
+      /* background: linear-gradient(160deg, #0094e993 0%, #80d0c793 100%), url(images/1.jpg); */
+      /* background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(images/3.jpg); */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+    }
+
+    .wave-container h2,
+    h1 {
+      font-family: prompt;
+      color: white;
+      padding: 16px;
+    }
+
+    .wave-container p {
+      font-family: prompt;
+      color: white;
+      padding: 16px;
+
     }
   </style>
 
@@ -202,9 +243,32 @@
     </div>
 
   </header>
+  <div class="wave-container pb-5">
+    <div class="container-fluid py-5" style="margin-bottom:200px">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex justify-content-center flex-column">
+            <img src="images/crulogo.png" class="img-fluid d-block mx-auto " width="100px" alt="cru-logo">
+            <div class="text-white">
+              <h2 style="text-align: center">โรงเรียนชลราษฎรอำรุง</h2>
+            </div>
+            <div>
+              <p style="text-align: center">ยินดีต้อนรับผู้ใช้งานเข้าสู่เว็บไซต์</p>
+            </div>
+            <div>
+              <button class="btn btn-primary d-block mx-auto" style="text-align: center"
+                onclick="window.location.href='#home';">เข้าสู่เว็บไซต์</button>
+            </div>
+          </div>
+          <div style="height:100px"></div>
+        </div>
+      </div>
+    </div>
 
+    <img class="wave" src="images/wave.svg" width="100%" alt="My Happy SVG" />
+  </div>
 
-  <div class="container-fluid fadecontent">
+  <div class="container-fluid fadecontent" id="home">
     <div class="row t2">
       <div class="col-12">
         <div class=""
@@ -215,24 +279,42 @@
       </div>
     </div>
     <div class="scrollcontainer photos">
-      <a href="images/obec/7-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/7-13-8-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/6-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/6-13-8-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/5-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/5-13-8-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/4-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/4-13-8-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/3-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/3-13-8-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/2-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/2-13-8-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/1-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/1-13-8-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/0-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/0-13-8-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/9-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/9-day-01-08-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/8-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/8-day-01-08-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/7-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/7-day-01-08-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/6-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/6-day-01-08-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/5-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/5-day-01-08-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/4-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/4-day-01-08-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/3-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/3-day-01-08-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/2-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/2-day-01-08-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/1-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/1-day-01-08-2565.jpg" class="scrollitem" /></a>
-      <a href="images/obec/0-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/0-day-01-08-2565.jpg" class="scrollitem" /></a>
+      <a href="images/obec/7-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/7-13-8-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/6-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/6-13-8-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/5-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/5-13-8-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/4-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/4-13-8-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/3-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/3-13-8-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/2-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/2-13-8-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/1-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/1-13-8-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/0-13-8-2565.jpg" data-lightbox="photos"><img src="images/obec/0-13-8-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/9-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/9-day-01-08-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/8-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/8-day-01-08-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/7-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/7-day-01-08-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/6-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/6-day-01-08-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/5-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/5-day-01-08-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/4-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/4-day-01-08-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/3-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/3-day-01-08-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/2-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/2-day-01-08-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/1-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/1-day-01-08-2565.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/0-day-01-08-2565.jpg" data-lightbox="photos"><img src="images/obec/0-day-01-08-2565.jpg"
+          class="scrollitem" /></a>
       <a href="images/obec/96342.jpg" data-lightbox="photos"><img src="images/obec/96342.jpg" class="scrollitem" /></a>
       <a href="images/obec/96341.jpg" data-lightbox="photos"><img src="images/obec/96341.jpg" class="scrollitem" /></a>
       <a href="images/obec/96340.jpg" data-lightbox="photos"><img src="images/obec/96340.jpg" class="scrollitem" /></a>
