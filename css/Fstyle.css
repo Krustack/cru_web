@@ -4,8 +4,7 @@
 
 @font-face {
     font-family: 'thonburi';
-    src: url('../fonts/thonburi-webfont.woff2') format('woff2'),
-         url('../fonts/thonburi-webfont.woff') format('woff');
+    src: url('../fonts/thonburi/SFThonburi-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
 
@@ -16,8 +15,7 @@
 
 @font-face {
     font-family: 'thonburi';
-    src: url('../fonts/thonburibold-webfont.woff2') format('woff2'),
-         url('../fonts/thonburibold-webfont.woff2') format('woff');
+    src: url('../fonts/thonburi/SFThonburi-Bold.ttf') format('ttf');
     font-weight: bold;
     font-style: normal;
 
