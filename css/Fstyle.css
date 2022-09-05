@@ -3,7 +3,7 @@
 
 
 @font-face {
-    font-family: 'thonburi';
+    font-family: 'SFthonburi';
     src: url('../fonts/thonburi/SFThonburi-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
@@ -14,12 +14,12 @@
 
 
 @font-face {
-    font-family: 'thonburi';
+    font-family: 'SFthonburi';
     src: url('../fonts/thonburi/SFThonburi-Bold.ttf') format('ttf');
     font-weight: bold;
     font-style: normal;
 
 }
 body{
-    font-family: 'thonburi';
+    font-family: 'SFthonburi';
 }
