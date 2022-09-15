@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body, html {
+  height: 100%;
+}
+    </style>
+    <meta charset="UTF-8">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/main.js"></script>
+
+    <title>Document</title>
+    <script type="text/javascript">
+window.addEventListener('load', function() {
+	let message = { height: document.body.scrollHeight, width: document.body.scrollWidth };	
+
+	// window.top refers to parent window
+	window.top.postMessage(message, "*");
+});
+let iframe = document.querySelector("#child-iframe");
+
+	window.addEventListener('message', function(e) {
+		// message that was passed from iframe page
+		let message = e.data;
+
+		iframe.style.height = message.height + 'px';
+		iframe.style.width = message.width + 'px';
+	} , false);
+      </script>  
+</head>
+<body onload="resize();">
+    <iframe src="https://script.google.com/macros/s/AKfycbyZCRS56NldKMiwZDPflHoEo0a5RFiUq-DE5WUPea4dkTsU9vJ2JqYmGsDf929b_Nol/exec" title="krutim" frameborder="0" scrolling="no" style="width: 100%;" id="child-iframe"  ></iframe>
+
+</body>
+</html>
