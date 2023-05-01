@@ -133,40 +133,41 @@
 
   <script>
     $(document).ready(function () {
-    //   var x = window.matchMedia("(max-width: 700px)")
-    //   if (x.matches) {
-    //     Swal.fire({
-    //       //title: '26 มิถุนายน วันต่อต้านยาเสพติดโลก',
-    //       // text: 'Modal with a custom image.',
-    //       backdrop: 'rgba(0,0,0,.7)',
-    //       width: 380,
-    //       height: 500,
-    //       showCancelButton: true,
-    //       imageUrl: 'images/king/mother-mobile.png',
-    //       imageWidth: 285,
-    //       imageHeight: 428,
-    //       //html: '<iframe  width="285px" height="428px" src="carousel-mobile.html""  frameborder="0"></iframe>',
-    //       confirmButtonText: 'เข้าสู่เว็บไซต์',
-    //       cancelButtonColor: '#BF6B04',
-    //       cancelButtonText: '<a href="https://script.google.com/macros/s/AKfycbxBnAsnBfnKjXAjhH856e4BH86FkklzXgfyN8eyRHG3a-xPXJ_75_h_DQIRVnJpEYhd/exec" target="_blank" style="color:white;">ลงนามถวายพระพร</a>',
-    //     })
-    //   } else {
+      var x = window.matchMedia("(max-width: 700px)")
+      if (x.matches) {
         Swal.fire({
           //title: '26 มิถุนายน วันต่อต้านยาเสพติดโลก',
           // text: 'Modal with a custom image.',
           backdrop: 'rgba(0,0,0,.7)',
+          width: 380,
+          height: 500,
+          showCancelButton: true,
+          // imageUrl: 'images/king/mother-mobile.png',
+          imageWidth: 285,
+          imageHeight: 428,
+          html: '<iframe  width="285px" height="428px" src="carousel-mobile.html""  frameborder="0"></iframe>',
+          confirmButtonText: 'เข้าสู่เว็บไซต์',
+          cancelButtonColor: '#BF6B04',
+          cancelButtonText: '<a href="https://script.google.com/macros/s/AKfycbxwyqcMSemGbSv1fKzge_WofZkLipSK_I7p2IzxVx_Fcd9B5aRU4FW0hJVXOocqWDi0Ag/exec" target="_blank" style="color:white;">ลงนามถวายพระพร</a>',
+        })
+      } else {
+        Swal.fire({
+          title: '26 มิถุนายน วันต่อต้านยาเสพติดโลก',
+          text: 'Modal with a custom image.',
+          backdrop: 'rgba(0,0,0,.7)',
           width: 1000,
           height: 540,
-         // showCancelButton: true,
-          imageUrl: 'images/vichakarn/register.jpg',
+          showCancelButton: true,
+          // imageUrl: 'images/vichakarn/register.jpg',
           imageWidth: 900,
           imageHeight: 540,
-          //html: '<iframe  width="720px" height="540px"  src="carousel.html""  frameborder="0"></iframe>',
+          html: '<iframe  width="720px" height="540px"  src="carousel.html""  frameborder="0"></iframe>',
           confirmButtonText: 'เข้าสู่เว็บไซต์',
-         // cancelButtonColor: '#BF6B04',
-          //cancelButtonText: '<a href="https://script.google.com/macros/s/AKfycbw0uPzWqQhrhEa96kzIVIm7QzD2u2X-MbV6wgWscPN0TzykTVrwev201L3tLM2b6Ogk/exec" target="_blank" style="color:white;">ร่วมน้อมรำลึกพระมหากรุณาธิคุณ</a>',
+          cancelButtonColor: '#BF6B04',
+          cancelButtonText: '<a href="https://script.google.com/macros/s/AKfycbxwyqcMSemGbSv1fKzge_WofZkLipSK_I7p2IzxVx_Fcd9B5aRU4FW0hJVXOocqWDi0Ag/exec" target="_blank" style="color:white;">ร่วมน้อมรำลึกพระมหากรุณาธิคุณ</a>',
         })
-      });
+      }
+    });
 
   </script>
 
@@ -264,10 +265,14 @@
       </div>
     </div>
     <div class="scrollcontainer photos mb-2">
-      <a href="images/obec/13-Nov.jpg" data-lightbox="photos"><img src="images/obec/13-Nov.jpg" class="scrollitem" /></a>
-      <a href="images/obec/12-Nov.jpg" data-lightbox="photos"><img src="images/obec/12-Nov.jpg" class="scrollitem" /></a>
-      <a href="images/obec/11-Nov.jpg" data-lightbox="photos"><img src="images/obec/11-Nov.jpg" class="scrollitem" /></a>
-      <a href="images/obec/10-Nov.jpg" data-lightbox="photos"><img src="images/obec/10-Nov.jpg" class="scrollitem" /></a>
+      <a href="images/obec/13-Nov.jpg" data-lightbox="photos"><img src="images/obec/13-Nov.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/12-Nov.jpg" data-lightbox="photos"><img src="images/obec/12-Nov.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/11-Nov.jpg" data-lightbox="photos"><img src="images/obec/11-Nov.jpg"
+          class="scrollitem" /></a>
+      <a href="images/obec/10-Nov.jpg" data-lightbox="photos"><img src="images/obec/10-Nov.jpg"
+          class="scrollitem" /></a>
       <a href="images/obec/9-Nov.jpg" data-lightbox="photos"><img src="images/obec/9-Nov.jpg" class="scrollitem" /></a>
       <a href="images/obec/8-Nov.jpg" data-lightbox="photos"><img src="images/obec/8-Nov.jpg" class="scrollitem" /></a>
       <a href="images/obec/7-Nov.jpg" data-lightbox="photos"><img src="images/obec/7-Nov.jpg" class="scrollitem" /></a>
@@ -314,8 +319,7 @@
 
           <div class="col-lg-3 col-sm-6 col-12 link mt-2 justify-content-center d-flex">
             <div class="p-2 m-2" style="width:180px;min-height:180px;background-image: url(images/post-it.svg); background-size: cover;
-                background-position:top center;"><a
-                href="payment/m1.html">
+                background-position:top center;"><a href="payment/m1.html">
                 <p class="text-secondary py-5 px-3" style="margin-top: 20px; ">
                   ใบแจ้งชำระค่าบำรุงการศึกษาชั้นมัธยมศึกษาปีที่ 1 ภาคเรียนที่ 2 ปีการศึกษา 2565</p>
               </a></div>
@@ -323,8 +327,7 @@
 
           <div class="col-lg-3 col-sm-6 col-12 link mt-2 justify-content-center d-flex">
             <div class="p-2 m-2" style="width:180px;min-height:180px;background-image: url(images/post-it.svg); background-size: cover;
-                background-position:top center;"><a
-                href="payment/m2.html">
+                background-position:top center;"><a href="payment/m2.html">
                 <p class="text-secondary py-5 px-3" style="margin-top: 20px; ">
                   ใบแจ้งชำระค่าบำรุงการศึกษาชั้นมัธยมศึกษาปีที่ 2 ภาคเรียนที่ 2 ปีการศึกษา 2565</p>
               </a></div>
@@ -332,8 +335,7 @@
 
           <div class="col-lg-3 col-sm-6 col-12 link mt-2 justify-content-center d-flex">
             <div class="p-2 m-2" style="width:180px;min-height:180px;background-image: url(images/post-it.svg); background-size: cover;
-                background-position:top center;"><a
-                href="payment/m3.html">
+                background-position:top center;"><a href="payment/m3.html">
                 <p class="text-secondary py-5 px-3" style="margin-top: 20px; ">
                   ใบแจ้งชำระค่าบำรุงการศึกษาชั้นมัธยมศึกษาปีที่ 3 ภาคเรียนที่ 2 ปีการศึกษา 2565</p>
               </a></div>
@@ -341,8 +343,7 @@
 
           <div class="col-lg-3 col-sm-6 col-12 link mt-2 justify-content-center d-flex">
             <div class="p-2 m-2" style="width:180px;min-height:180px;background-image: url(images/post-it.svg); background-size: cover;
-                background-position:top center;"><a
-                href="payment/m4.html">
+                background-position:top center;"><a href="payment/m4.html">
                 <p class="text-secondary py-5 px-3" style="margin-top: 20px; ">
                   ใบแจ้งชำระค่าบำรุงการศึกษาชั้นมัธยมศึกษาปีที่ 4 ภาคเรียนที่ 2 ปีการศึกษา 2565</p>
               </a></div>
@@ -350,8 +351,7 @@
 
           <div class="col-lg-3 col-sm-6 col-12 link mt-2 justify-content-center d-flex">
             <div class="p-2 m-2" style="width:180px;min-height:180px;background-image: url(images/post-it.svg); background-size: cover;
-                background-position:top center;"><a
-                href="payment/m5.html">
+                background-position:top center;"><a href="payment/m5.html">
                 <p class="text-secondary py-5 px-3" style="margin-top: 20px; ">
                   ใบแจ้งชำระค่าบำรุงการศึกษาชั้นมัธยมศึกษาปีที่ 5 ภาคเรียนที่ 2 ปีการศึกษา 2565</p>
               </a></div>
@@ -359,8 +359,7 @@
 
           <div class="col-lg-3 col-sm-6 col-12 link mt-2 justify-content-center d-flex">
             <div class="p-2 m-2" style="width:180px;min-height:180px;background-image: url(images/post-it.svg); background-size: cover;
-                background-position:top center;"><a
-                href="payment/m6.html">
+                background-position:top center;"><a href="payment/m6.html">
                 <p class="text-secondary py-5 px-3" style="margin-top: 20px; ">
                   ใบแจ้งชำระค่าบำรุงการศึกษาชั้นมัธยมศึกษาปีที่ 6 ภาคเรียนที่ 2 ปีการศึกษา 2565</p>
               </a></div>
@@ -464,13 +463,14 @@
     </div>
 
     <div class="row justify-content-center">
-		
-	<div class="col-lg-3 col-sm-6 col-12 link b">
+
+      <div class="col-lg-3 col-sm-6 col-12 link b">
         <div class="d-flex flex-column justify-content-center align-items-center border rounded border-primary py-5">
           <img src="images/yearbook.png" width="60px">
           <h3 style="color:#056cf2;text-align: center;">ระบบงานวิชาการ</h3>
           <span style="color:#056cf2;text-align: center;">Academic System</span>
-          <a class="btn btn-primary m-2 px-3" href="https://vichakarn9.wixsite.com/vichakarn-cru" target="_blank">click</a>
+          <a class="btn btn-primary m-2 px-3" href="https://vichakarn9.wixsite.com/vichakarn-cru"
+            target="_blank">click</a>
         </div>
       </div>
 
