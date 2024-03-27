@@ -223,7 +223,7 @@ select.minimal:focus {
   <script>
    
    $(function() {
-  loadPage("personel/directors.html");
+  loadPage("personel/Directors.html");
   $('#mySelect').on('change', function() {
     loadPage($(this).find(':selected').data('url'));
     //OR
@@ -239,7 +239,7 @@ function loadPage(url) {
     <div class="row" style="margin-bottom:20px;margin-top: 20px; ">
       <div class="col-12">
         <select class="minimal" id="mySelect" onfocus='this.size=13;' onblur='this.size=0;' onchange='this.size=1; this.blur();'>
-          <option selected value="0"  data-url="personel/directors.html">ผู้บริหาร</option>
+          <option selected value="0"  data-url="personel/Directors.html">ผู้บริหาร</option>
           <option value="1"  data-url="personel/science.html" >กลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี</option>
           <option value="2"  data-url="personel/math.html" >กลุ่มสาระการเรียนรู้คณิตศาสตร์</option>
           <option value="3"  data-url="personel/thai.html" >กลุ่มสาระการเรียนรู้ภาษาไทย</option>
